@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.0.2",
+      "sem_ver" : "0.0.3",
       "build_uid" : "31b8fcbf-003d-448d-92a6-ce56a22bad0c",
-      "MD5-CAM-1.0.1" : "055f603b354cecb73d2be8afa229d775",
+      "MD5-CAM-1.0.1" : "6d49f892dc2ddf0038d333e6fd79e9ff",
       "PARENT:MD5-CAM-1.0.1" : "E2E3EBBE935AFEB07650DA63E8C7D68B"
     },
     "details" : {
@@ -122,7 +122,7 @@
       "children" : [ {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..1",
+        "occurrences" : "0..*",
         "nodeId" : "at0.2",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -697,16 +697,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0047.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_EHR_URI",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -1821,7 +1812,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EF2E88ACDF6FE3D05F990397A74EA636"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere informasjon om en spesifikk overfølsomhetsreaksjonshendelse forårsaket av eksponering for en spesifikk substans.",
+          "keywords" : [ ],
+          "use" : "Brukes for å registrere informasjon om en spesifikk overfølsomhetsreaksjonshendelse forårsaket av eksponering for en spesifikk substans. Substansen kan angis i elementet \"Spesifikk substans\" i denne arketypen, eller i et passende element i foreldrearketypen den er nøstet inni.\r\n\r\nDenne arketypen er laget for å brukes innenfor arketypene EVALUATION.adverse_reaction_risk eller OBSERVATION.adverse_reaction_monitoring, for å registrere detaljer om en spesifikk reaksjonshendelse. Den kan likevel også brukes innenfor andre arketyper der det er klinisk passende.\r\n\r\nOmfanget av denne arketypen er bevisst fokusert på å definere et pragmatisk datasett som brukes i de fleste kliniske systemer, eller vil være egnet for de fleste vanlige kliniske situasjoner. Den tillater imidlertid utvidelse av modellen når ekstra detaljer er nødvendig, ved å bruke SLOTene \"Reaksjonsdetaljer\", \"Eksponeringsdetaljer\", \"Detaljer om klinisk håndtering\" og \"Rapporteringsdetaljer\". Utvidelser kan være nødvendig for eksempel dersom en spesialist i allergologi eller immunologi skal registrere en mer detaljert vurdering som en del av rapportering til tilsynsorganer, eller innenfor i en klinisk studie.",
+          "misuse" : "Brukes ikke til å registrere uønskede hendelser, inkludert svikt i kliniske prosesser, intervensjoner eller produkter. For eksempel: Feil bruk eller feil gjort ved feilaktig administrering av en substans, feil dosering, feilmerking, skade forårsaket av en intervensjon eller prosedyre, overdose/forgiftning etc. Bruk en spesifikk arketype for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record information about a specific adverse reaction event caused by exposure to a specific substance.",
+          "keywords" : [ ],
+          "use" : "Use to record information about a specific adverse reaction event caused by exposure to a specific substance. The substance may be recorded in the 'Specific substance' element in this archetype, or in an appropriate element in the parent archetype in which this archetype is nested.\r\n\r\nThis archetype is designed to be nested within the EVALUATION.adverse_reaction_risk or the OBSERVATION.adverse_reaction_monitoring archetypes, to record details about a specific reaction event, but it could also be nested within other archetypes where clinically appropriate.\r\n\r\nThe scope of this archetype has deliberately focused on identifying a pragmatic data set that are used in most clinical systems or will be suitable for most common clinical scenarios; however, it permits extension of the model when additional detail is required, using the 'Reaction details', 'Exposure details', and 'Reporting details' slots. An extension may be required if a specialist allergist or immunologist needed to record a more detailed assessment as part of a report to regulatory bodies or within the context of a clinical trial.",
+          "misuse" : "Not to be used to record adverse events, including failures of clinical process, interventions or products. For example: abnormal use or mistakes/errors made in maladministration of an agent or substance; incorrect dosage; mislabelling; harm or injury caused by an intervention or procedure; overdose/poisoning etc. Use a specific archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar informació relacionada amb un esdeveniment específic de reacció adversa provocat per l’exposició a una substància específica.",
+          "keywords" : [ ],
+          "use" : "Utilitzar per a registrar informació relacionada amb un esdeveniment específic de reacció adversa provocat per l’exposició a una substància específica. La substància s’ha de registrar en l’element de «Substància específica» en aquest arquetip o en un element adient de l’arquetip primari on està situat aquest arquetip. \r\n \r\nAquest arquetip està dissenyat per a situar-se dins de l’arquetip EVALUATION.adverse_reaction_risk o de l’arquetip OBSERVATION.adverse_reaction_monitoring amb l’objectiu de registrar dades sobre un esdeveniment específic de reacció adversa, però també es pot situar dins d’altres arquetips que s’adeqüen clínicament. \r\n\r\nL’abast d’aquest arquetip s’ha enfocat de manera deliberada en identificar un conjunt pragmàtic de dades que s’utilitzen a la majoria de sistemes clínics o que s’adeqüen a la majoria de situacions clíniques habituals; tanmateix, permet l’ampliació del model quan es requereixi informació suplementària usant les pestanyes «Dades de la reacció», «Dades de l’exposició» i «Dades de l’informe». Es podria requerir una ampliació si un al·lergòleg especialista o un immunòleg necessités registrar una avaluació més detallada com a part d’un informe destinat a organismes reguladors o dins del context d’un assaig clínic.",
+          "misuse" : "No utilitzar per a registrar esdeveniments adversos, com errades en els processos, intervencions i productes clínics. Per exemple: ús indegut o dosificació incorrecta o mala administració d’un agent o substància; errors d’etiquetatge; danys o ferides causades per una operació o procediment; sobredosi/enverinament, etc. Utilitzar un arquetip específic per aquesta finalitat.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar información relacionada con un evento específico de reacción adversa provocado por la exposición a una sustancia específica.",
+          "keywords" : [ ],
+          "use" : "Usar para registrar información relacionada con un evento específico de reacción adversa provocado por la exposición a una sustancia específica. La sustancia debe registrarse en el elemento \"Sustancia específica\" de este arquetipo o en un elemento apropiado del arquetipo principal donde se encuentra este arquetipo.\r\n\r\nEste arquetipo está diseñado para ubicarse dentro del arquetipo EVALUATION.adverse_reaction_risk o del arquetipo OBSERVATION.adverse_reaction_monitoring, con el objetivo de registrar datos sobre un evento específico de reacción adversa. Sin embargo, también puede situarse dentro de otros arquetipos que sean clínicamente adecuados.\r\n\r\nEl alcance de este arquetipo ha sido deliberadamente enfocado en identificar un conjunto pragmático de datos que se utilizan en la mayoría de los sistemas clínicos o que se ajustan a la mayoría de situaciones clínicas habituales. No obstante, permite la ampliación del modelo cuando se requiere información adicional, mediante las pestañas \"Datos de la reacción\", \"Datos de la exposición\" y \"Datos del informe\". Esta ampliación podría ser necesaria, por ejemplo, si un alergólogo o un inmunólogo especialista necesita registrar una evaluación más detallada como parte de un informe destinado a organismos reguladores o en el contexto de un ensayo clínico.",
+          "misuse" : "No utilizar para registrar eventos adversos, como errores en el proceso clínico, intervenciones o productos. Por ejemplo: uso indebido o dosificación incorrecta o mala administración de un agente o sustancia; errores de etiquetaje; daños o heridas causadas por una operación o procedimiento; sobredosis/envenenamiento, etc. Utilizar un arquetipo específico para esta finalidad.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.adverse_reaction_event.v1",
     "differential" : true,
@@ -1855,64 +1908,28 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0008.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0009.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DURATION",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0015.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0016.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DURATION",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -1940,16 +1957,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0025.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_EHR_URI",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
